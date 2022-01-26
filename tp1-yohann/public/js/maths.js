@@ -1,14 +1,14 @@
 function loopZeroToFour() {
 	for (let i = 0 ; i < 5 ; ++i) {
 		if (i === 0) {
-			logGreen();
+			displayLog(i, green);
 		}
 		else {
 			if (i % 2 === 0) {
-				logRed();
+				displayLog(i, red);
 			}
 			else {
-				logBlue();
+				displayLog(i, blue);
 			}
 		}
 

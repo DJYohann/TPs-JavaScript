@@ -1,11 +1,3 @@
-function logGreen() {
-	console.log(green);
-}
-
-function logRed() {
-	console.log(red);
-}
-
-function logBlue() {
-	console.log(blue);
+function displayLog(message, color) {
+	console.log("%c" + message ,"color:"+color);
 }
