@@ -1,10 +1,10 @@
-function addNews(){
+function addNews() {
     let valueInput = document.querySelector("input[name = 'titleToAdd']").value;
     let form = document.querySelector('#addNewsForm');
 
-    form.action = "#";
+    form.action = "";
     try {
-        if(valueInput === '')
+        if (valueInput === '')
             throw 'Titre de news vide';
 
     } catch(e) {
@@ -12,8 +12,7 @@ function addNews(){
         errorMessageArticle(form, 'Titre de news vide');
     }
 
-    if (verifyUniqArticle(form, valueInput) == true && valueInput != '') {
-        console.log('faut pas ');
+    if (isUniqueArticle(form, valueInput)) {
         let article = document.createElement('article');
         let title = document.createElement('h3');
         let news = document.querySelector('#news');
@@ -27,13 +26,11 @@ function addNews(){
     }
 }
 
-function verifyUniqArticle(form, myTitle){
+function isUniqueArticle(form, myTitle){
     let titles = document.querySelectorAll('h3.title');
-
+    console.log(titles)
     titles.forEach(title => {
-        console.log(myTitle + ' ' +title.textContent);
         if (myTitle === title.textContent){
-            console.log('ok');
             errorMessageArticle(form,'Article non unique');
             return false;
         }
@@ -42,9 +39,11 @@ function verifyUniqArticle(form, myTitle){
 }
 
 function errorMessageArticle(form, message){
-    console.log('içi');
-    let errorParagraph = document.createElement('p');
-    errorParagraph.innerText = message;
-    errorParagraph.style.color = RED;
-    form.prepend(errorParagraph);
+    let error = document.querySelector('form p')
+    if (error == null) {
+        let errorParagraph = document.createElement('p');
+        errorParagraph.innerText = message;
+        errorParagraph.style.color = RED;
+        form.prepend(errorParagraph);
+    }
 }
