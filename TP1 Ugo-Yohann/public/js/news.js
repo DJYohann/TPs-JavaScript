@@ -12,26 +12,29 @@ function addNews(){
         errorMessageArticle(form, 'Titre de news vide');
     }
 
-    if (!verifyUniqArticle(valueInput)) {
-        errorMessageArticle(form,'Article non unique');
-        return;
+    if (verifyUniqArticle(form, valueInput) == true && valueInput != '') {
+        console.log('faut pas ');
+        let article = document.createElement('article');
+        let title = document.createElement('h3');
+        let news = document.querySelector('#news');
+
+        article.classList.add('test');
+        title.classList.add('title');
+        title.innerHTML = valueInput;
+
+        article.append(title);
+        news.append(article);
     }
-    let article = document.createElement('article');
-    let title = document.createElement('h3');
-    let news = document.querySelector('#news');
-
-    article.classList.add('test');
-    title.classList.add('title');
-    title.innerHTML = valueInput;
-
-    article.append(title);
-    news.append(article);
 }
 
-function verifyUniqArticle(myTitle){
+function verifyUniqArticle(form, myTitle){
     let titles = document.querySelectorAll('h3.title');
+
     titles.forEach(title => {
+        console.log(myTitle + ' ' +title.textContent);
         if (myTitle === title.textContent){
+            console.log('ok');
+            errorMessageArticle(form,'Article non unique');
             return false;
         }
     });
@@ -39,6 +42,7 @@ function verifyUniqArticle(myTitle){
 }
 
 function errorMessageArticle(form, message){
+    console.log('içi');
     let errorParagraph = document.createElement('p');
     errorParagraph.innerText = message;
     errorParagraph.style.color = RED;
