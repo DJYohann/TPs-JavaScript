@@ -2,7 +2,6 @@ function addNews() {
     let valueInput = document.querySelector("input[name = 'titleToAdd']").value;
     let form = document.querySelector('#addNewsForm');
 
-    form.action = "";
     try {
         if (valueInput === '')
             throw 'Titre de news vide';

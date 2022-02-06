@@ -25,13 +25,13 @@ Au clic sur le bouton du formulaire, il faut récupérer le contenu du champ (vo
 
 Lever une Error (mode texte, sans classe) si le champ est vide et afficher un message d’erreur (en rouge) au début du formulaire.
 
-## Objectif bonus
+### Objectif bonus
 
 Créer une fonction prenant en paramètre un message qui le log en le précédent du DateTime (date + heure) actuel
 
 Au clic sur le bouton du formulaire il faut vérifier l'unicité de l’article. Si article non unique, alors on affiche un message d’erreur au début du formulaire. Le message doit être de couleur rouge.
 
-## NB
+### NB
 
 L’expression “le log” fait référence à la méthode logMessage(message) du fichier log.js
 

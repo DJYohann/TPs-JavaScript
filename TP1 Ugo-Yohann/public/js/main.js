@@ -26,4 +26,7 @@ logMessageWithDateAndHours('date + heure')
 
 let button = document.querySelector("input[name='addNewsBtn']");
 if (button !== null)
-    button.addEventListener('click', addNews);
+    button.addEventListener('click', function (event) {
+        event.preventDefault();
+        addNews();
+    });
