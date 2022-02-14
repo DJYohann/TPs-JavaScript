@@ -9,9 +9,7 @@ Dépôt des travaux pratiques permettant de découvrir le langage JavaScript
 ### [TP1](./TP1%20Ugo-Yohann/)
 	
 * Introduction à JavaScript
-
 * Manipulation de la DOM
-
 * Gestion des événements
 
 ### [TP2](./TP2%20Ugo-Yohann/)

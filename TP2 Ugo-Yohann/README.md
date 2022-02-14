@@ -42,7 +42,6 @@ Adapter le formulaire pour ajouter une news :
 * attention l’ID doit être unique et suivre le précédent
 * les 2 champs sont obligatoires
 
-
 ### NB
 
 L’expression “le log” fait référence à la méthode logMessage(message) du fichier log.js

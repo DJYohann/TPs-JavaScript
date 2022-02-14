@@ -31,11 +31,25 @@
 		</section>
 
 		<form id="addNewsForm">
-			Nom de la news : <input name="titleToAdd" type="text" required/>
+			Nom de la news : <input name="titleToAdd" type="text"/>
 			<br>
-			Description de la news : <textarea></textarea>
+			Description de la news : <textarea name="descToAdd"></textarea>
 			<br>
-			<input type="submit" name="addNewsBtn" />
+			<input type="submit" name="addNewsBtn"/>
 		</form>
 	</body>
+
+	<script src="../public/js/emptyTitleError.js"></script>
+	<script src="../public/js/emptyDescError.js"></script>
+	<script src="../public/js/existingArticleError.js"></script>
+	<script src="../public/js/shortTitleError.js"></script>
+
+	<script src="../public/js/article.js"></script>
+	<script src="../public/js/articleHtml.js"></script>
+
+	<script src="../public/js/const.js"></script>
+	<script src="../public/js/log.js"></script>
+	<script src="../public/js/html.js"></script>
+	<script src="../public/js/html-article.js"></script>
+	<script src="../public/js/main.js"></script>
 </html>
