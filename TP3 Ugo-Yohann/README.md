@@ -8,7 +8,7 @@ Convertir le code JS classique actuel en code JS JQuery
 
 Faire un appel AJAX au flux suivant :
 
-[](https://newsdata.io/api/1/news?apikey=pub_4627365ed0e1d1c0536016b89a969e1275ef&language=fr&category=technology)
+https://newsdata.io/api/1/news?apikey=pub_4627365ed0e1d1c0536016b89a969e1275ef&language=fr&category=technology
 
 Une fois cela fait, il faudra log la réponse.
 
