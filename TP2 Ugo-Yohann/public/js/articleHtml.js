@@ -12,6 +12,7 @@ class ArticleHtml {
         let button = document.createElement('button');
         let news = document.querySelector('#news');
 
+        newArticle.id = this.article.id;
         h3.innerHTML = this.article.title;
         p.innerHTML = this.article.desc;
         button.innerHTML = 'View detail';

@@ -1,14 +1,14 @@
 class Article {
     static #NB_ID = 3;
 
-    #id;
+    id;
     title;
     desc;
 
     constructor(title,desc) {
         this.#assertRequiredField(title,desc);
         this.#assertUnicity(title);
-        this.#id = PREFIX+Article.#NB_ID;
+        this.id = PREFIX+Article.#NB_ID;
         this.title = title;
         this.desc = desc;
 
@@ -38,6 +38,6 @@ class Article {
     }
 
     toString() {
-        return 'ID : ' + this.#id + ' Title : ' + this.title + ' Desc : ' + this.desc;
+        return 'ID : ' + this.id + ' Title : ' + this.title + ' Desc : ' + this.desc;
     }
 }
