@@ -1,11 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>TP3 Ugo-Yohann</title>
-</head>
+    <meta charset="utf-8" />
+    <title>TP3 Ugo-Yohann</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../public/css/jquery-ui.css"/>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
 <body>
 
+    <h1> News </h1>
+
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1"> Article & recherche </a></li>
+            <li><a href="#tabs-2"> Ajouter un article </a></li>
+        </ul>
+        <div id="tabs-1">
+            <label>Rechercher une news</label><br/>
+            <input type="text" placeholder="Rechercher...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+            <section id="news">
+                <h2 id="titleNews"></h2>
+                <article id="article-1">
+                    <h3 class="title">News 1</h3>
+                    <p>Ma super news 1</p>
+                    <button class="viewDetail">View detail</button>
+                </article>
+                    <article id="article-2">
+                    <h3 class="title">News 2</h3>
+                    <p>Ma super news 2</p>
+                    <button>View detail</button>
+                </article>
+                <article id="article-3">
+                    <h3 class="title">News 3</h3>
+                    <p>Ma super news 3</p>
+                    <button>View detail</button>
+                </article>
+            </section>
+        </div>
+
+        <div id="tabs-2">
+            <form id="addNewsForm">
+                <fieldset>
+                    <label>Nom de la news* :</label><br/>
+                    <input name="titleToAdd" type="text" /><br/>
+
+                    <label>Description de la news* :</label><br/>
+                    <textarea name="descriptionToAdd"></textarea><br/>
+
+                    <input type="submit" name="addNewsBtn"/>
+                </fieldset>
+            </form>
+        </div>
+    </div>
 </body>
+
+<script src="../public/js/duplicatearticleerror.js"></script>
+<script src="../public/js/requiredpropertyerror.js"></script>
+<script src="../public/js/article.js"></script>
+
+<script src="../public/js/const.js"></script>
+<script src="../public/js/log.js"></script>
+<script src="../public/js/html.js"></script>
+<script src="../public/js/request.js"></script>
+<script src="../public/js/main.js"></script>
+
 </html>
