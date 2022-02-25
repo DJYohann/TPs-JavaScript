@@ -30,5 +30,5 @@ $.each(JSON.parse(ALLNEWSJSON), function(index, element) {
 });
 
 
-let url = 'https://newsdata.io/api/1/news?apikey=pub_4627365ed0e1d1c0536016b89a969e1275ef&language=fr&category=technology'
+let url = 'https://newsdata.io/api/1/news?apikey=pub_49479ee12c7eecba9246a47865394fd27c82&language=fr&category=technology'
 ajaxRequest(url);
