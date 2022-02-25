@@ -11,11 +11,11 @@ function ajaxRequest(url) {
 
         if (xhr.status >= 200 && xhr.status < 300) {
             $(data.results).each(function(index, result) {
-                if(result['title'] !== null){
-                    if (result['description'] !== null) {
+                if(result.hasOwnProperty('title') && result['title'] !== null){
+                    if (result.hasOwnProperty('description') && result['description'] !== null) {
                         let a = new Article(0, result.title, result.description);
                         a.insertArticleHtml();
-                    } else if (result['full_description'] !== null) {
+                    } else if (result.hasOwnProperty('full_description') && result['full_description'] !== null) {
                         let a = new Article(0, result.title, result.full_description);
                         a.insertArticleHtml();
                     }   
