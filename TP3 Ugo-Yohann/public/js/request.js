@@ -10,7 +10,7 @@ function ajaxRequest(url) {
         logMessageWithDate("Message retour HTTP : " + textStatus);
 
         if (xhr.status >= 200 && xhr.status < 300) {
-            data.results.forEach (function(result) {
+            $(data.results).each(function(index, result) {
                 if(result['title'] !== null){
                     if (result['description'] !== null) {
                         let a = new Article(0, result.title, result.description);
