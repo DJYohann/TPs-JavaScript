@@ -11,13 +11,15 @@ function ajaxRequest(url) {
 
         if (xhr.status >= 200 && xhr.status < 300) {
             data.results.forEach (function(result) {
-                if (result['full_description'] !== null) {
-                    let a = new Article(0, result.title, result.full_description);
-                    a.insertArticleHtml();
-                } else {
-                    let a = new Article(0, result.title, result.description);
-                    a.insertArticleHtml();
-                }   
+                if(result['title'] !== null){
+                    if (result['description'] !== null) {
+                        let a = new Article(0, result.title, result.description);
+                        a.insertArticleHtml();
+                    } else if (result['full_description'] !== null) {
+                        let a = new Article(0, result.title, result.full_description);
+                        a.insertArticleHtml();
+                    }   
+                }
             });
         }
         if (xhr.status >= 300 && xhr.status < 400) {
