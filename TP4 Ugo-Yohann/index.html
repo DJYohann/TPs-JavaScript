@@ -15,7 +15,7 @@
         <section id="news">
             <h2 v-if="getNbArticles" id="titleNews"> {{ getNbArticles }} {{ displayNbArticles }} </h2>
 
-            <article-news v-for="article in articles" :articles="articles" :article="article" :key="article.id"></article-news>
+            <article-news v-for="article,index in articles" :articles="articles" :article="article" :index="index" ::key="article.id"></article-news>
         </section>
 
         <form @submit=" addArticle " id="addNewsForm ">

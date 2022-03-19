@@ -35,24 +35,25 @@ Vue.createApp({
         addArticle: function(event) {
             event.preventDefault();
 
-            console.log(this.titleToAdd);
             this.message = null;
 
-            let articeToAdd = new Article(0, this.titleToAdd, this.descriptionToAdd);
             try {
+                let articeToAdd = new Article(0, this.titleToAdd, this.descriptionToAdd);
                 this.articles.push(articeToAdd);
                 this.message = "L'article est bien ajouté";
                 this.formStyle.color = '#0f0';
+                this.titleToAdd = null;
+                this.descriptionToAdd = null;
             } catch (e) {
+                console.error(e.message);
+                this.formStyle.color = '#f00';
                 if (e instanceof RequiredPropertyError) {
-                    console.error(e.message);
                     this.message = 'Le titre ou la descritpion doit être renseigné';
-                    this.formStyle.color = '#f00';
+                }
+                if (e instanceof DuplicateArticleError) {
+                    this.message = "L'article est déjà existant";
                 }
             }
-
-            this.titleToAdd = null;
-            this.descriptionToAdd = null;
         }
     }
 }).component('ArticleNews', ArticleNews).mount('#app');

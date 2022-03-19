@@ -11,38 +11,7 @@ class Article {
         this.description = description;
 
         this.assertRequiredProperty();
-    }
-
-    createArticleHtml() {
-        let newArticle = document.createElement('article');
-        let h3 = document.createElement('h3');
-        let p = document.createElement('p');
-        let button = document.createElement('button');
-        let news = document.querySelector('#news');
-
-        h3.innerHTML = this.title;
-        p.innerHTML = this.description;
-        button.innerHTML = 'View detail';
-        this.bindButtonViewdetail(button, viewdetailClick);
-        h3.classList.add('title');
-        newArticle.id = Article.idPrefix + this.id;
-
-        newArticle.append(h3);
-        newArticle.append(p);
-        newArticle.append(button);
-        news.append(newArticle);
-    }
-
-    insertArticleHtml() {
-        this.assertRequiredProperty();
         this.assertUnicity();
-
-        this.createArticleHtml();
-        return true;
-    }
-
-    bindButtonViewdetail(button, callback) {
-        button.onclick = callback;
     }
 
     assertUnicity() {
@@ -59,6 +28,9 @@ class Article {
 
     assertRequiredProperty() {
         if (this.title === '' || this.title === null)
+            throw new RequiredPropertyError();
+
+        if (this.description === '' || this.description === null)
             throw new RequiredPropertyError();
     }
 }
