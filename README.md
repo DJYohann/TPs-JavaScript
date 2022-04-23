@@ -1,5 +1,8 @@
 # TPs-JavaScript
 
+<a href="https://jquery.com/"> <img src="https://img.shields.io/badge/jQuery-3.6.0-%230668AB"> </a>
+<a href="https://vuejs.org/"> <img src="https://img.shields.io/badge/Vue.js-3-%2342B883"> </a>
+
 ## Présentation
 
 Dépôt des travaux pratiques permettant de découvrir le langage JavaScript 
