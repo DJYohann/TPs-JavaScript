@@ -10,7 +10,7 @@ Dépôt des travaux pratiques permettant de découvrir le langage JavaScript
 ## Travaux pratiques 
 
 ### [TP1](./TP1%20Ugo-Yohann/)
-	
+
 * Introduction à JavaScript
 * Manipulation de la DOM
 * Gestion des événements
@@ -29,6 +29,27 @@ Dépôt des travaux pratiques permettant de découvrir le langage JavaScript
 ### [TP4](./TP4%20Ugo-Yohann/)
 
 * VueJS
+
+## Lien GitHub Pages 
+
+* [TP1](./TP1%20Ugo-Yohann/view/index.html)
+* [TP2](./TP2%20Ugo-Yohann/view/index.html)
+* [TP3](./TP3%20Ugo-Yohann/view/index.html)
+
+> **_NOTE :_** 
+
+> Un serveur web est nécessaire pour le TP4
+
+> Télécharger NodeJS : https://nodejs.org/fr/
+
+> Cloner le dépôt : `git clone https://github.com/DJYohann/TPs-JavaScript.git`
+
+> Dans TPs-JavaScript/TP4 Ugo-Yohann, lancer la commande :
+```
+npx serve
+```
+
+> Lancer le lien renvoyé par la commande 
 
 ## Auteurs 
 
