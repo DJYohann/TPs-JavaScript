@@ -53,5 +53,5 @@ npx serve
 
 ## Auteurs 
 
-* VIGNON Ugo
-* BREUIL Yohann
+* [Ugo VIGNON](https://github.com/UgoWithoutH)
+* [Yohann BREUIL](https://github.com/DJYohann)
